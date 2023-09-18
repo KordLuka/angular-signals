@@ -1,0 +1,29 @@
+<footer class="flex flex-col gap-y-2">
+  <h1 class="text-neutral-400 font-medium text-md mb-2">
+    Count: {{ activeCount() }}
+  </h1>
+
+  <div class="flex justify-start gap-x-2">
+    <button
+      class="bg-gray-800 border border-gray-700 shadow-lg text-white p-4 mb-2"
+      [ngClass]="{ 'bg-blue-500': filter() === FilterEnum.all }"
+      (click)="changeFilter(FilterEnum.all)"
+    >
+      All
+    </button>
+    <button
+      class="bg-gray-800 border border-gray-700 shadow-lg text-white p-4 mb-2"
+      [ngClass]="{ 'bg-blue-500': filter() === FilterEnum.active }"
+      (click)="changeFilter(FilterEnum.active)"
+    >
+      Active
+    </button>
+    <button
+      class="bg-gray-800 border border-gray-700 shadow-lg text-white p-4 mb-2"
+      [ngClass]="{ 'bg-blue-500': filter() === FilterEnum.completed }"
+      (click)="changeFilter(FilterEnum.completed)"
+    >
+      Completed
+    </button>
+  </div>
+</footer>

@@ -1,0 +1,12 @@
+<header>
+  <h1 class="text-neutral-400 font-medium text-md mb-2">Add a new todo</h1>
+  <form [formGroup]="form">
+    <input
+      class="flex w-full h-[50px] text-white font-light rounded-md bg-gray-950 border border-gray-700 px-3 py-3 file:border-0 placeholder:text-neutral-400 focus:outline-none focus:border-blue-500"
+      placeholder="What needs to be done?"
+      autofocus
+      formControlName="text"
+      (keyup.enter)="addTodo()"
+    />
+  </form>
+</header>

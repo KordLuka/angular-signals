@@ -1,0 +1,14 @@
+<section>
+  <h1 class="text-neutral-400 font-medium text-md mb-2">List of tasks</h1>
+  <div class="max-h-[50vh] overflow-auto">
+    <ul>
+      <ng-container *ngFor="let todo of visibleTodos()">
+        <li
+          class="w-full rounded overflow-hidden bg-gray-800 border border-gray-700 shadow-lg text-white p-4 mb-2"
+        >
+          {{ todo.text }}
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+</section>
